@@ -12,5 +12,17 @@
         "recurring": false,
         "subtasks": [],
         "status": "Completed"
+    },
+    {
+        "id": 3,
+        "title": "COI",
+        "description": "assignment ",
+        "priority": "Low",
+        "tags": [],
+        "due": "2026-06-01",
+        "done": false,
+        "recurring": true,
+        "subtasks": [],
+        "status": "Todo"
     }
 ]
