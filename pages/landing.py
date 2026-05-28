@@ -90,15 +90,27 @@ def landing_page():
         color: white !important;
     }
 
+    /* ── Step cards: flex row so all cards share the same height ── */
+    .step-row {
+        display: flex;
+        gap: 16px;
+        align-items: stretch;
+    }
+
     .step-card {
+        flex: 1;
         background: rgba(15,25,45,0.76);
         border: 1px solid rgba(77,166,255,0.14);
         border-radius: 24px;
         padding: 28px;
         text-align: center;
         transition: 0.35s ease;
-        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         color: white !important;
+        box-sizing: border-box;
     }
 
     .step-card:hover {
@@ -251,23 +263,27 @@ def landing_page():
     st.subheader("⚡ Workflow")
 
     steps = [
-        ("01", "Create Tasks",    "Add goals, priorities and deadlines."),
-        ("02", "AI Planning",     "AI generates smart workflows."),
-        ("03", "Track Progress",  "Analyze productivity using dashboard."),
-        ("04", "Achieve Goals",   "Complete tasks efficiently with AI.")
+        ("01", "Create Tasks",   "Add goals, priorities and deadlines."),
+        ("02", "AI Planning",    "AI generates smart workflows."),
+        ("03", "Track Progress", "Analyze productivity using dashboard."),
+        ("04", "Achieve Goals",  "Complete tasks efficiently with AI.")
     ]
 
-    cols = st.columns(4)
+    # All 4 cards in ONE markdown block inside a flex row —
+    # this is the only reliable way to equalize heights in Streamlit.
+    cards_html = "".join([
+        f'<div class="step-card">'
+        f'<div class="step-no">{s[0]}</div>'
+        f'<div class="step-title">{s[1]}</div>'
+        f'<div class="step-desc">{s[2]}</div>'
+        f'</div>'
+        for s in steps
+    ])
 
-    for col, step in zip(cols, steps):
-        with col:
-            st.markdown(f"""
-            <div class="step-card">
-                <div class="step-no">{step[0]}</div>
-                <div class="step-title">{step[1]}</div>
-                <div class="step-desc">{step[2]}</div>
-            </div>
-            """, unsafe_allow_html=True)
+    st.markdown(
+        '<div class="step-row">' + cards_html + '</div>',
+        unsafe_allow_html=True
+    )
 
     st.markdown("<br><br>", unsafe_allow_html=True)
 
