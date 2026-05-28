@@ -121,28 +121,3 @@ Team collaboration mode
 ❤️ Purpose
 
 Built to help users stay focused, reduce procrastination, and achieve more every day.
-
-
----
-
-# 💾 STEP 5: Save changes
-- Scroll down
-- Click **Commit changes**
-
----
-
-# 🎉 DONE!
-
-Your GitHub repo is now updated with a **professional README like a startup project**.
-
----
-
-# 🚀 If you want next level upgrade
-I can also help you:
-- Add 🔥 badges (Python, Streamlit, stars)
-- Add “Live Demo” button
-- Add screenshots section (very important for hackathons)
-- Make it look like a **₹1 crore startup pitch README**
-- Optimize for GitHub trending
-
-Just tell 👍
