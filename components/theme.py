@@ -6,6 +6,23 @@ def apply_global_ui():
     <style>
 
     /* =========================================
+       HIDE SIDEBAR — UPDATED FOR STREAMLIT 1.40+
+    ========================================= */
+    [data-testid="stSidebar"]                        { display: none !important; }
+    [data-testid="collapsedControl"]                  { display: none !important; }
+    section[data-testid="stSidebar"]                  { display: none !important; }
+    [data-testid="stSidebarNav"]                      { display: none !important; }
+    [data-testid="stBaseButton-headerNoPadding"]      { display: none !important; }
+    [data-testid="stHeaderActionElements"]            { display: none !important; }
+    button[data-testid="baseButton-header"]           { display: none !important; }
+    .st-emotion-cache-zq5wmm                          { display: none !important; }
+    .st-emotion-cache-1cypcdb                         { display: none !important; }
+    .st-emotion-cache-eczf16                          { display: none !important; }
+    #MainMenu                                         { display: none !important; }
+    header                                            { display: none !important; }
+    footer                                            { display: none !important; }
+
+    /* =========================================
        PURE BLACK PREMIUM BACKGROUND
     ========================================= */
 
@@ -75,15 +92,7 @@ def apply_global_ui():
     }
 
     /* =========================================
-       REMOVE STREAMLIT DEFAULT UI
-    ========================================= */
-
-    header        { visibility: hidden !important; }
-    footer        { visibility: hidden !important; }
-    #MainMenu     { visibility: hidden !important; }
-
-    /* =========================================
-       BLOCK CONTAINER — PROPER PADDING
+       BLOCK CONTAINER — FULL WIDTH FIX
     ========================================= */
 
     .block-container {
@@ -91,37 +100,8 @@ def apply_global_ui():
         padding-bottom: 2rem   !important;
         padding-left:   2rem   !important;
         padding-right:  2rem   !important;
-        max-width:      1200px !important;
+        max-width:      100%   !important;
         margin: 0 auto !important;
-    }
-
-    /* =========================================
-       SIDEBAR
-    ========================================= */
-
-    [data-testid="stSidebar"] {
-        background: rgba(5,12,28,0.95) !important;
-        border-right: 1px solid rgba(77,166,255,0.15) !important;
-        padding-top: 1rem !important;
-    }
-
-    [data-testid="stSidebar"] .stButton > button {
-        width: 100% !important;
-        text-align: left !important;
-        padding: 10px 16px !important;
-        font-size: 14px !important;
-        border-radius: 12px !important;
-        margin-bottom: 4px !important;
-        background: rgba(10,25,50,0.6) !important;
-        border: 1px solid rgba(77,166,255,0.1) !important;
-        box-shadow: none !important;
-    }
-
-    [data-testid="stSidebar"] .stButton > button:hover {
-        background: rgba(20,50,100,0.8) !important;
-        border-color: rgba(77,166,255,0.35) !important;
-        transform: translateX(4px) !important;
-        box-shadow: none !important;
     }
 
     /* =========================================
@@ -188,12 +168,12 @@ def apply_global_ui():
     ========================================= */
 
     .stButton > button {
-        width: 100%;
-        border-radius: 12px;
-        padding: 10px 16px;
+        width: 100% !important;
+        border-radius: 12px !important;
+        padding: 12px 16px !important;
         border: none !important;
         font-weight: 700 !important;
-        font-size: 14px !important;
+        font-size: 15px !important;
         color: white !important;
         background: linear-gradient(135deg, #0d5eff, #3aa0ff) !important;
         transition: all 0.3s ease;
@@ -201,13 +181,13 @@ def apply_global_ui():
     }
 
     .stButton > button:hover {
-        transform: translateY(-2px);
+        transform: translateY(-2px) !important;
         background: linear-gradient(135deg, #1970ff, #66c2ff) !important;
-        box-shadow: 0 0 25px rgba(77,166,255,0.4);
+        box-shadow: 0 0 25px rgba(77,166,255,0.4) !important;
     }
 
     .stButton > button:active {
-        transform: scale(0.97);
+        transform: scale(0.97) !important;
         background: linear-gradient(135deg, #0949c9, #1d8fff) !important;
     }
 
