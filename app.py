@@ -6,13 +6,14 @@ from components.theme import apply_global_ui
 from auth.login   import login_page
 from auth.signup  import signup_page
 
-from pages.landing               import landing_page
-from pages.tasks.add_task        import add_task_page
-from pages.tasks.manage_tasks    import manage_tasks_page
-from pages.tasks.completed_tasks import completed_page
-from pages.tasks.kanban_board    import kanban_board_page
-from pages.dashboard             import dashboard
-from pages.ai_assistant          import ai_page
+# ✅ Change all imports from pages → page_views
+from page_views.landing               import landing_page
+from page_views.tasks.add_task        import add_task_page
+from page_views.tasks.manage_tasks    import manage_tasks_page
+from page_views.tasks.completed_tasks import completed_page
+from page_views.tasks.kanban_board    import kanban_board_page
+from page_views.dashboard             import dashboard
+from page_views.ai_assistant          import ai_page
 
 
 # ================= PAGE CONFIG =================

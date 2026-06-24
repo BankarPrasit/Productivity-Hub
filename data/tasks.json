@@ -20,9 +20,21 @@
         "priority": "Low",
         "tags": [],
         "due": "2026-06-01",
+        "done": true,
+        "recurring": true,
+        "subtasks": [],
+        "status": "Completed"
+    },
+    {
+        "id": 3,
+        "title": "Python assignment ",
+        "description": "",
+        "priority": "High",
+        "tags": [],
+        "due": "2026-05-31",
         "done": false,
         "recurring": true,
         "subtasks": [],
-        "status": "Todo"
+        "status": "In Progress"
     }
 ]
