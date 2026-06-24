@@ -18,7 +18,7 @@ from pages.ai_assistant          import ai_page
 # ================= PAGE CONFIG =================
 st.set_page_config(
     page_title      = "Productivity Hub",
-    page_icon="assets/icon.ico",
+    page_icon="🚀",
     layout          = "wide",
     initial_sidebar_state = "collapsed"   # ← collapse sidebar on load
 )
